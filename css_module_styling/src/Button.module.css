@@ -1,0 +1,12 @@
+.class1{
+    display: block;
+    /* text-align: center; */
+    background-color: red;
+    margin: auto;
+    height: 5%;
+    width: 10%;
+}
+
+.class2:hover{
+    background-color: blue;
+}
