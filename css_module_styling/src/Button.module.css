@@ -1,4 +1,4 @@
-.class1{
+.className1{
     display: block;
     /* text-align: center; */
     background-color: red;
@@ -7,6 +7,6 @@
     width: 10%;
 }
 
-.class2:hover{
+.className2:hover{
     background-color: blue;
 }
