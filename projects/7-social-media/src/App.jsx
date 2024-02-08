@@ -7,7 +7,7 @@ import CreatePost from "./components/CreatePost";
 import PostListProvider from "./store/post-list-store";
 import { useState } from "react";
 function App() {
-  const [selectedTab, setSelectedTab] = useState("Create Post");
+  const [selectedTab, setSelectedTab] = useState("Home");
 
   return (
     <PostListProvider>
