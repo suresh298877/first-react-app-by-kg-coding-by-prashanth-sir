@@ -19,9 +19,9 @@ function App() {
         <div className="content">
           <Header></Header>
           {selectedTab === "Home" ? (
-            <CreatePost></CreatePost>
-          ) : (
             <PostList></PostList>
+          ) : (
+            <CreatePost></CreatePost>
           )}
           <Footer></Footer>
         </div>

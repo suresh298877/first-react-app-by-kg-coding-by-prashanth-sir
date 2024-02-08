@@ -11,3 +11,11 @@
   height: 600px;
   /* min-height: 800px; */
 }
+.post-card{
+  margin: 20px 50px;
+  min-width: 30rem;
+}
+
+.hashtag{
+  margin: 0px 3px;
+}
