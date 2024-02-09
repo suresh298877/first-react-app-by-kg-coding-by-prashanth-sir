@@ -3,13 +3,15 @@ export const PostList=createContext();
 
 // eslint-disable-next-line no-unused-vars
 const postListReducer=(currPostList,action)=>{
-    console.log(action)
     let newPostList=currPostList;
     if(action.type==='DELETE_POST'){
         newPostList=currPostList.filter(post=>post.id!==action.payload.postId);
     }
     else if(action.type==='ADD_POST'){
         newPostList=[...currPostList,action.payload]
+    }
+    else if(action.type=='ADD_INITIAL_POST'){
+        newPostList=action.payload.posts
     }
     return newPostList
 }
@@ -38,10 +40,19 @@ const PostListProvider=({children})=>{
             }
         })
     }
+
+    const addInitialPost=(posts)=>{
+        dispatchPostList({
+            type:'ADD_INITIAL_POST',
+            payload:{
+                posts:posts
+            }
+        })
+    }
     // eslint-disable-next-line no-unused-vars
     const [postList,dispatchPostList]=useReducer(postListReducer,[]);
 
-    return <PostList.Provider value={{postList:postList,addPost:addPost,deletePost:deletePost}}>
+    return <PostList.Provider value={{postList:postList,addPost:addPost,deletePost:deletePost,addInitialPost:addInitialPost}}>
         {children}
     </PostList.Provider>
 };
