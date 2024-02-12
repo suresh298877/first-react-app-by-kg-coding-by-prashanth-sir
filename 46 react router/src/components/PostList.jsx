@@ -20,8 +20,7 @@ const PostList = () => {
   );
 };
 
-export const postLoader=()=>{
-
+export const postLoader= async ()=>{
   return fetch("https://dummyjson.com/posts")
       .then((res) => res.json())
       .then((data) => {
