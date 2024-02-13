@@ -13,12 +13,12 @@ function App() {
 
   return (
     <PostListProvider>
-      <div className="app-container">
+      <div classNameName="app-container">
         <Sidebar
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
         ></Sidebar>
-        <div className="content">
+        <div classNameName="content">
           <Header></Header>
           {selectedTab === "Home" ? (
             <PostList></PostList>
