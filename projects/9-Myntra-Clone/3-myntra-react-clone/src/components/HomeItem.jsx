@@ -1,5 +1,4 @@
 const HomeItem=({item})=>{
-    console.log(typeof item.image)
     return <div className="item-container">
     <img className="item-image" src={"../"+item.image} alt="item image" />
     {/* <img className="item-image" src={`../../public/${item.image}`} alt="item image" /> */}
