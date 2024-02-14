@@ -1,10 +1,12 @@
 // import { createStore } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
+import counterSlice from "./counter";
+import privacySlice from "./privacy";
 
-const INITIAL_VALUE = {
-    counter : 5,
-    privacy : false,
-}
+// const INITIAL_VALUE = {
+//     counter : 5,
+//     privacy : false,
+// }
 
 // const counterReducer = ( store = INITIAL_VALUE, action ) => {
 
@@ -28,10 +30,11 @@ const INITIAL_VALUE = {
 
 
 
-const counterStore=configureStore( { reducer : {
-    
-} } );
 
+const counterStore=configureStore( { reducer : {
+    counter : counterSlice.reducer,
+    privacy : privacySlice.reducer,
+} } );  
 
 export default counterStore;
 
