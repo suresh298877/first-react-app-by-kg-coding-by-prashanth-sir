@@ -13,7 +13,7 @@ const Fetchitems=()=>{
         const signal=controller.signal;
 
         dispatch(fetchStatuSliceActions.markFetchingStarted());
-        fetch("http://localhost:8080/items",{signal})
+        fetch("http://localhost:3030/items",{signal})
         .then((res)=>res.json())
         .then(({items})=>{
             dispatch(fetchStatuSliceActions.markFetchDone());

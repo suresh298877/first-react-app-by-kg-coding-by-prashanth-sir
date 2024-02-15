@@ -1,5 +1,13 @@
+import { useDispatch } from "react-redux";
+import { bagActions } from "../store/bagSlice";
+import { RiDeleteBin2Fill } from "react-icons/ri";
+
 const BagItem=({item})=>{
 
+  const dispatch=useDispatch();
+  const handleDeleteItem=()=>{
+    dispatch(bagActions.removeFromBag(item.id))
+  }
     return <div className="bag-item-container">
     <div className="item-left-part">
       <img className="bag-item-img" src={`../${item.image}`} />
@@ -21,7 +29,7 @@ const BagItem=({item})=>{
       </div>
     </div>
 
-    <div className="remove-from-cart" onClick={console.log("div was clicked")}>X</div>
+    <div className="remove-from-cart" onClick={handleDeleteItem}><RiDeleteBin2Fill /></div>
   </div>
 }
 export default BagItem;
